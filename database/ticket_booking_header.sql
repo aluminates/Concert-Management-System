@@ -1,0 +1,16 @@
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B1', 'C3', 'CUST6', 10, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B2', 'C2', 'CUST3', 20, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B3', 'C5', 'CUST8', 15, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B4', 'C1', 'CUST5', 5, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B5', 'C7', 'CUST1', 20, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B6', 'C3', 'CUST10', 15, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B7', 'C1', 'CUST2', 10, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B8', 'C5', 'CUST9', 5, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B9', 'C1', 'CUST4', 10, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B10', 'C8', 'CUST7', 15, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B11', 'C4', 'CUST1', 20, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B12', 'C8', 'CUST2', 5, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B13', 'C2', 'CUST3', 15, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B14', 'C7', 'CUST4', 20, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B15', 'C4', 'CUST6', 10, 5);
+INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B16', 'C7', 'CUST8', 5, 5);

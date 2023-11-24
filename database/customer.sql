@@ -1,0 +1,10 @@
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST1', 'Richa Agarwal', 'richaa@abc.com', '9218756349', 'Eastwood Road', 'Bangalore', '2001-10-19', '21');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST2', 'Ankita Rajan', 'ankitar@abc.com',  '9400275418', 'Milan Road', 'Mumbai', '1995-11-10', '28');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST3', 'Sunita Raval', 'sunitaraval@xyz.com', '9491230333', 'Riddhipur Road', 'Guwahati', '2006-02-29','17');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST4', 'Naina Prabhu', 'nainaprabhu@rst.com', '8103065876', 'Vikhroli Road', 'Bhubaneshwar', '2000-09-01', '23');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST5', 'John Issac', 'johnissac@def.com', '8723197324', 'Doe Street', 'Kolkata', '1995-06-06', '28');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST6', 'Ayushi Savant', 's.ayushi@lmn.com', '9821780772', 'Dhirajgarh Marg', 'New Delhi', '2004-03-13', '19');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST7', 'Sakshi Dixit', 'sakshid@def.com', '8743107654', 'SV Road', 'Mysore', '1996-01-31','27');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST8', 'Akhila Mohan', 'akhilamohan@rst.com', '8451850673', 'Aasth Chowk', 'Lucknow', '2008-04-15','15');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST9', 'Mona Shankar', 'mona.s@lmn.com', '6706272897', 'Sahil Nagar', 'Bangalore', '1998-08-04','25');
+INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST10', 'Nandini Roy', 'nandiniroy@xyz.com', '7294654110', 'Doe Street', 'Chennai', '2007-05-25','16');
