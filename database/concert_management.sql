@@ -1,3 +1,28 @@
+CREATE TABLE concert (
+    concert_id VARCHAR(20) NOT NULL,
+    venue_id VARCHAR(20),
+    concert_name VARCHAR(30),
+    date_of_concert DATE,
+    start_time TIME,
+    end_time TIME,
+    PRIMARY KEY (concert_id),
+    FOREIGN KEY (venue_id) REFERENCES venues(venue_id) ON UPDATE CASCADE ON DELETE NO ACTION
+);
+
+
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C1', 'V7', 'Papon Live in Concert', '2024-11-25', '18:00:00', '22:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C2', 'V8', 'Ed Sheeran: +-=/* Tour', '2024-03-16', '18:30:00', '23:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C3', 'V1', 'Sunburn', '2024-12-28', '18:30:00', '23:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C4', 'V1', 'Super Sunday Bollywood Night', '2024-11-19', '17:00:00', '21:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C5', 'V2', 'Ronan Keating', '2024-01-18', '19:00:00', '23:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C6', 'V7', 'Whitefield Music Festival', '2024-02-25', '18:00:00', '22:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C7', 'V9', 'Neeti Mohan', '2024-12-16', '17:00:00', '21:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C8', 'V5', 'Sunburn Arena Ft. Dimitri Vegas & Like Mike-Mumbai', '2024-11-24', '18:30:00', '23:00:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C9', 'V5', 'Sonu Nigam', '2024-12-02', '17:30:00', '20:30:00');
+INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C10', 'V6', 'KING', '2024-12-24', '19:30:00', '23:30:00');
+
+
+
 CREATE TABLE customer(
 	cust_id VARCHAR(20) NOT NULL,
 	cust_name VARCHAR(20),
@@ -20,6 +45,8 @@ INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DO
 INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST8', 'Akhila Mohan', 'akhilamohan@rst.com', '8451850673', 'Aasth Chowk', 'Lucknow', '2008-04-15','15');
 INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST9', 'Mona Shankar', 'mona.s@lmn.com', '6706272897', 'Sahil Nagar', 'Bangalore', '1998-08-04','25');
 INSERT INTO customer (cust_id, cust_name, email, phone_no, street_name, city, DOB, age) VALUES ('CUST10', 'Nandini Roy', 'nandiniroy@xyz.com', '7294654110', 'Doe Street', 'Chennai', '2007-05-25','16');
+
+
 
 CREATE TABLE ticket_type(
     ticketType_id VARCHAR(20) NOT NULL,
@@ -52,6 +79,8 @@ INSERT INTO ticket_type (ticketType_id, concert_id, price, tickets_available) VA
 INSERT INTO ticket_type (ticketType_id, concert_id, price, tickets_available) VALUES ('T2', 'C8', '3200', '3200');
 INSERT INTO ticket_type (ticketType_id, concert_id, price, tickets_available) VALUES ('T3', 'C8', '5000', '1800');
 
+
+
 CREATE TABLE venues(
 	venue_id VARCHAR(20) NOT NULL, 
     venue_name VARCHAR(30),
@@ -72,6 +101,8 @@ INSERT INTO venues (venue_id, venue_name, capacity, street_name, city) VALUES ('
 INSERT INTO venues (venue_id, venue_name, capacity, street_name, city) VALUES ('V8', 'R2 Grounds', '3000', 'Bandra East', 'Mumbai');
 INSERT INTO venues (venue_id, venue_name, capacity, street_name, city) VALUES ('V9', 'T.M.C Ground', '18000', 'Hiranandani Estate,Thane West', 'Thane');
 INSERT INTO venues (venue_id, venue_name, capacity, street_name, city) VALUES ('V10', 'SVP Stadium', '160000', 'Worli', 'Mumbai');
+
+
 
 CREATE TABLE ticket_booking_header(
 	booking_id VARCHAR(20) NOT NULL,
@@ -106,6 +137,8 @@ INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, ta
 INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B14', 'C7', 'CUST4', 20, 5);
 INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B15', 'C4', 'CUST6', 10, 5);
 INSERT INTO ticket_booking_header (booking_id, concert_id, cust_id, discount, tax) VALUES ('B16', 'C7', 'CUST8', 5, 5);
+
+
 
 CREATE TABLE ticket_booking_details(
 	seq_no INT NOT NULL AUTO_INCREMENT,
@@ -152,36 +185,7 @@ INSERT INTO ticket_booking_details (booking_id, ticketType_id, tickets_bought) V
 INSERT INTO ticket_booking_details (booking_id, ticketType_id, tickets_bought) VALUES ('B16', 'T4', 3);
 
 
-
-
-
-
-
-
-
-
-CREATE TABLE concert (
-    concert_id VARCHAR(20) NOT NULL,
-    venue_id VARCHAR(20),
-    concert_name VARCHAR(30),
-    date_of_concert DATE,
-    start_time TIME,
-    end_time TIME,
-    PRIMARY KEY (concert_id),
-    FOREIGN KEY (venue_id) REFERENCES venues(venue_id) ON UPDATE CASCADE ON DELETE NO ACTION
-);
-
-
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C1', 'V7', 'Papon Live in Concert', '2024-11-25', '18:00:00', '22:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C2', 'V8', 'Ed Sheeran: +-=/* Tour', '2024-03-16', '18:30:00', '23:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C3', 'V1', 'Sunburn', '2024-12-28', '18:30:00', '23:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C4', 'V1', 'Super Sunday Bollywood Night', '2024-11-19', '17:00:00', '21:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C5', 'V2', 'Ronan Keating', '2024-01-18', '19:00:00', '23:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C6', 'V7', 'Whitefield Music Festival', '2024-02-25', '18:00:00', '22:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C7', 'V9', 'Neeti Mohan', '2024-12-16', '17:00:00', '21:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C8', 'V5', 'Sunburn Arena Ft. Dimitri Vegas & Like Mike-Mumbai', '2024-11-24', '18:30:00', '23:00:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C9', 'V5', 'Sonu Nigam', '2024-12-02', '17:30:00', '20:30:00');
-INSERT INTO concert (concert_id, venue_id, concert_name, date_of_concert, start_time, end_time) VALUES ('C10', 'V6', 'KING', '2024-12-24', '19:30:00', '23:30:00');
+--- TRIGGERS
 
 DELIMITER //
 
@@ -226,3 +230,99 @@ BEGIN
 	SET new.amount = new.price * new.tickets_bought;
 END;$$
 DELIMITER ;
+
+
+--- FUNCTIONS
+DELIMITER //
+CREATE FUNCTION GetCustomerDetails(customerID VARCHAR(20))
+RETURNS VARCHAR(255)
+BEGIN
+    DECLARE customerInfo VARCHAR(255);
+
+    SELECT CONCAT(cust_name, ', ', email, ', ', telephone, ', ', address_line1, ', ', city, ', ', state, ', ', pincode)
+    INTO customerInfo
+    FROM customer
+    WHERE cust_id = customerID;
+
+    RETURN customerInfo;
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE FUNCTION GetEventRevenue(concert_id VARCHAR(20))
+RETURNS FLOAT
+BEGIN
+    DECLARE revenue FLOAT;
+
+    SELECT SUM(net_amount)
+    INTO revenue
+    FROM ticket_booking_header
+    WHERE concert_id = concert_id;
+
+    RETURN revenue;
+END //
+DELIMITER ;
+
+
+
+--- PROCEDURES
+DELIMITER //
+CREATE PROCEDURE CancelBooking(bookingID VARCHAR(20))
+BEGIN
+    DECLARE ticketTypeID VARCHAR(20);
+    DECLARE ticketsBought INT;
+
+    -- Get ticket type and number of tickets bought for the booking
+    SELECT ticketType_id, tickets_bought
+    INTO ticketTypeID, ticketsBought
+    FROM ticket_booking_details
+    WHERE booking_id = bookingID;
+
+    -- Update ticket availability
+    UPDATE ticket_type
+    SET tickets_available = tickets_available + ticketsBought
+    WHERE ticketType_id = ticketTypeID;
+
+    -- Delete booking details
+    DELETE FROM ticket_booking_details
+    WHERE booking_id = bookingID;
+
+    -- Delete booking header
+    DELETE FROM ticket_booking_header
+    WHERE booking_id = bookingID;
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE PROCEDURE UpdateTicketAvailability(ticketTypeID VARCHAR(20), eventID VARCHAR(20), ticketsBought INT)
+BEGIN
+    UPDATE ticket_type
+    SET tickets_available = tickets_available - ticketsBought
+    WHERE ticketType_id = ticketTypeID AND event_id = eventID;
+END //
+DELIMITER ;
+
+
+
+--- JOINS 
+SELECT concert.concert_id, concert.concert_name, concert.date_of_concert, venues.venue_name
+FROM concert
+INNER JOIN venues ON concert.venue_id = venues.venue_id;
+
+SELECT concert.concert_id, concert.concert_name, concert.date_of_concert, ticket_booking_header.booking_id
+FROM concert
+LEFT JOIN ticket_booking_header ON concert.concert_id = ticket_booking_header.concert_id;
+
+SELECT venues.venue_id, venues.venue_name, concert.concert_id, concert.concert_name, concert.date_of_concert
+FROM venues
+RIGHT JOIN concert ON venues.venue_id = concert.venue_id;
+
+SELECT a.concert_id AS concert1, a.concert_name AS name1, b.concert_id AS concert2, b.concert_name AS name2
+FROM concert a, concert b
+WHERE a.venue_id = b.venue_id AND a.date_of_concert = b.date_of_concert AND a.concert_id <> b.concert_id;
+
+SELECT concert.concert_id, concert.concert_name, venues.venue_id, venues.venue_name
+FROM concert
+CROSS JOIN venues;
+
